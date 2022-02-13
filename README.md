@@ -26,3 +26,5 @@ Things you may want to cover:
 - docker-compose up - コンテナを立ち上げるコマンド
 
 - mysql -u root -p - mysql を立ち上げるコマンド
+
+- set names utf8 sql 上で日本語を表示させるコマンド
