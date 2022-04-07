@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def create
-    @post = Post.new(title: params[:title], content: params[:content], category: params[:category], user_id: params[:user_id])
+    @post = Post.new(title: params[:title], content: params[:content], topic_id: params[:topic_id], username: params[:username])
     @post.save
   end
   def index
