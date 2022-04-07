@@ -1,0 +1,8 @@
+<h1>Topics#index</h1>
+<p>Find me in app/views/topics/create.html.erb</p>
+<% @topics.each do |topic_id| %>
+    <h3><%= topic.topic_name %></h3>
+    <p><%= topic.category_id %></p>
+    <p><%= topic.topic_owner %></p>
+    <p><%= topic.created_at %></p>
+<% end %>
