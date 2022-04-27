@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   post 'topics/create' => 'topics#create'
   get 'topics/index' => 'topics#index'
+  get 'topics/:id' => 'topics#show'
    # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

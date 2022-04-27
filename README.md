@@ -21,7 +21,7 @@ Things you may want to cover:
 
 - Deployment instructions
 
-- docker-compose exec web/db bash - ウェブ/db のターミナルを作るコマンド
+- docker-compose exec [web/db] bash - ウェブ/db のターミナルを作るコマンド
 
 - docker-compose up - コンテナを立ち上げるコマンド
 

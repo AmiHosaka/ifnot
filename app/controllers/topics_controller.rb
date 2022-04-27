@@ -6,4 +6,8 @@ class TopicsController < ApplicationController
   def index
     @topics = Topic.all.order(created_at: :desc)
   end
+  def show
+    @topic = Topic.find_by(id: params[:id])
+    @posts = Post.where(topic_id: params[:id])
+  end
 end

@@ -1,0 +1,13 @@
+<h1>Topics#show</h1>
+<p>Find me in app/views/topics/show.html.erb</p>
+<h2><%= @topic.topic_name %></h3>
+<p><%= @topic.category_id %></p>
+<p><%= @topic.topic_owner %></p>
+<p><%= @topic.created_at %></p>
+<p></p>
+<% @posts.each do |post| %>
+    <h3><%= post.title %></h3>
+    <p><%= post.content %></p>
+    <p><%= post.username %></p>
+    <p><%= post.created_at %></p>
+<% end %>
