@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get "/" => "home#top"
+  get "about" => "home#about"
+
   get 'categories/index' => 'categories#index' #分類を一覧表示する
   get 'categories/:id' => 'categories#show' #選択した分類に属する議題を一覧表示する
 

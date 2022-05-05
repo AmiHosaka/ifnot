@@ -10,6 +10,25 @@
   </head>
 
   <body>
+  <header>
+      <div class="header-logo">
+        <%= link_to("Ifnot", "/") %>
+      </div>
+      <ul class="header-menus">
+        <li>
+          <%= link_to("Ifnotとは", "/about") %>
+        </li>
+        <li>
+          <%= link_to("カテゴリ一覧", "/categories/index") %>
+        </li>
+        <li>
+          <%= link_to("議題一覧", "/topics/index") %>
+        </li>
+      </ul>
+    </header>
     <%= yield %>
+    <footer>
+      <p>© All rights reserved by AmiHosaka.</p>
+    </footer>
   </body>
 </html>
