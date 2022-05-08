@@ -1,6 +1,12 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
-<% @categories.each do |category| %>
-    <h3><%= category.category_name %></h3>
-    <p></p>
-<% end %>
+<div class="main categories-index">
+    <div class="container">
+        <div class ="categories-index-title">
+            <h1>カテゴリから探す</h1>
+        </div>
+        <% @categories.each do |category| %>
+            <div class="categories-index-item">
+                <%= category.category_name %>
+            </div>
+        <% end %>
+    </div>
+</div>

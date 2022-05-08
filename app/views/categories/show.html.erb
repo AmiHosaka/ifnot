@@ -1,8 +1,12 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
-<h2><%= @category.category_name %></h2>
-<p></p>
-<% @topics.each do |topic| %>
-    <h3><%= topic.topic_name %></h3>
-    <p><%= topic.created_at %></p>
-<% end %>
+<div class="main categories-show">
+  <div class="container">
+        <h1>Categories#show</h1>
+        <p>Find me in app/views/categories/show.html.erb</p>
+        <h2><%= @category.category_name %></h2>
+        <p></p>
+        <% @topics.each do |topic| %>
+            <h3><%= topic.topic_name %></h3>
+            <p><%= topic.created_at %></p>
+        <% end %>
+    </div>
+</div>
