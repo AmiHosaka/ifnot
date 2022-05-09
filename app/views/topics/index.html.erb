@@ -3,13 +3,15 @@
         <div class="topics-index-title">
             <h1>議題一覧</h1>
         </div>
-        <% @topics.each do |topic| %>
-            <div class="topics-index-item">
-                <h3><%= topic.topic_name %></h3>
-                <p><%= topic.category_id %></p>
-                <p><%= topic.topic_owner %></p>
-                <p><%= topic.created_at %></p>
-            </div>
-        <% end %>
+        <div class="topics-index-items">
+            <% @topics.each do |topic| %>
+                <div class="topics-index-item">
+                    <h3><%= link_to(topic.topic_name, "/topics/#{topic.id}") %></h3>
+                    <p><%= topic.category_id %></p>
+                    <p><%= topic.topic_owner %></p>
+                    <p><%= topic.created_at.to_s(:datetime_jp) %></p>
+                </div>
+            <% end %>
+        </div>
     </div>
 </div>

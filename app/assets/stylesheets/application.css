@@ -15,31 +15,48 @@
  */
 
 /* reset ================================ */
+html {
+  font: 100%/1.5 "Avenir Next", "Hiragino Sans", sans-serif;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
 
 /* 共通レイアウト ================================ */
+body {
+  min-height: 100vh;
+  margin: 0px;
+}
+
+.main {
+  width: 100%;
+  height: auto;
+  padding-top: 100px;
+  background-color: white;
+}
+
 .container {
   max-width: 600px;
-  margin: 60px auto;
+  margin: auto;
   padding-left: 15px;
   padding-right: 15px;
-  clear: both;
 }
 
 /* ヘッダー ================================ */
 header {
-  height: 64px;
-  position: absolute;
+  height: 75px;
+  position: fixed;
+  top: 0; /* 上下の固定位置を上から0pxにする */
   z-index: 1;
   width: 100%;
-  color: white;
+  background-color: #f5f8fa;
 }
 
 .header-logo {
   float: left;
   padding-left: 20px;
-  color: white;
-  font-size: 22px;
-  line-height: 64px;
+  color: f5f8fa;
+  font-size: 40px;
+  line-height: 75px;
 }
 
 .header-menus {
@@ -49,8 +66,19 @@ header {
 
 .header-menus li {
   float: left;
-  line-height: 64px;
-  font-size: 13px;
+  line-height: 75px;
+  font-size: 20px;
   color: white;
   padding-left: 15px;
+  list-style: none;
+}
+
+/* フッター ================================ */
+footer {
+  height: 64px;
+  width: 100%;
+  text-align: center;
+  background-color: #f5f8fa;
+  /* position: absolute; /*←絶対位置*/
+  /* bottom: 0; 下に固定 */
 }

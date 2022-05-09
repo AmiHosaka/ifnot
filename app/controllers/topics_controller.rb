@@ -9,5 +9,6 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find_by(id: params[:id])
     @posts = Post.where(topic_id: params[:id])
+    @category = Category.find_by(id: @topic.category_id)
   end
 end

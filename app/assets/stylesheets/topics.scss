@@ -1,3 +1,27 @@
 // Place all the styles related to the topics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* index ================================ */
+.topics-index-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topics-index-item {
+  width: 50%;
+}
+
+/* show ================================ */
+.topics-show-top {
+  text-align: center;
+}
+
+.topics-show-posts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topics-show-post {
+  width: 50%;
+}

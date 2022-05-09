@@ -1,3 +1,23 @@
 // Place all the styles related to the categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* index ================================ */
+.categories-index-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categories-index-item {
+  width: 50%;
+}
+
+/* show ================================ */
+.categories-show-topics {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.categories-show-topic {
+  width: 50%;
+}

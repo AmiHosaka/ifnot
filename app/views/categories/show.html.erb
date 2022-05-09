@@ -1,12 +1,15 @@
 <div class="main categories-show">
-  <div class="container">
-        <h1>Categories#show</h1>
-        <p>Find me in app/views/categories/show.html.erb</p>
-        <h2><%= @category.category_name %></h2>
-        <p></p>
-        <% @topics.each do |topic| %>
-            <h3><%= topic.topic_name %></h3>
-            <p><%= topic.created_at %></p>
-        <% end %>
+    <div class="container">
+        <div class="categories-show-title">
+            <h2><%= @category.category_name %></h2>
+        </div>
+        <div class="categories-show-topics">
+            <% @topics.each do |topic| %>
+                <div class="categories-show-topic">
+                    <h3><%= link_to(topic.topic_name, "/topics/#{topic.id}")%></h3>
+                    <p><%= topic.created_at.to_s(:datetime_jp) %></p>
+                </div>
+            <% end %>
+        </div>
     </div>
 </div>
