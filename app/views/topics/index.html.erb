@@ -6,7 +6,7 @@
         <div class="topics-index-items">
             <% @topics.each do |topic| %>
                 <div class="topics-index-item">
-                    <h3><%= link_to(topic.topic_name, "/topics/#{topic.id}") %></h3>
+                    <h3><%= link_to(topic.topic_name, "/topics/#{topic.id}")%></h3>
                     <p><%= topic.category_id %></p>
                     <p><%= topic.topic_owner %></p>
                     <p><%= topic.created_at.to_s(:datetime_jp) %></p>

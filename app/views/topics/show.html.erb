@@ -1,22 +1,20 @@
 <div class="main topics-show">
   <div class="container">
         <div class="topics-show-top">
-            <div class="topics-show-top-title">
-                <h2><%= @topic.topic_name %></h2>
-            </div>
-            <div class="topics-show-top-details">
-                <p><%= @category.category_name %></p>
-                <p><%= @topic.topic_owner %></p>
-                <p><%= @topic.created_at.to_s(:datetime_jp) %></p>
-            </div>
+            <h2 class="topics-show-top-title"><%= @topic.topic_name %></h2>
+            <p class="topics-show-top-category_name"><%= @category.category_name %></p>
+            <p class="topics-show-top-topic_owner"><%= @topic.topic_owner %></p>
+            <p class="topics-show-top-created_at"><%= @topic.created_at.to_s(:datetime_jp) %></p>
         </div>
         <div class="topics-show-posts">
             <% @posts.each do |post| %>
                 <div class="topics-show-post">
-                    <h3><%= post.title %></h3>
-                    <p><%= post.content %></p>
-                    <p><%= post.username %></p>
-                    <p><%= post.created_at.to_s(:datetime_jp) %></p>
+                    <h3 class="topics-show-post-title"><%= post.title %></h3>
+                    <p class="topics-show-post-content"><%= post.content %></p>
+                        <div class = "topics-show-post-secondary">
+                            <p class="topics-show-post-username"><%= post.username %></p>
+                            <p class="topics-show-post-created_at"><%= post.created_at.to_s(:datetime_jp) %></p>
+                        </div>
                 </div>
             <% end %>
         </div>

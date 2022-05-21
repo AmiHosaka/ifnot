@@ -49,14 +49,16 @@ header {
   z-index: 1;
   width: 100%;
   background-color: #f5f8fa;
+  text-decoration: none;
 }
 
 .header-logo {
   float: left;
   padding-left: 20px;
-  color: f5f8fa;
   font-size: 40px;
   line-height: 75px;
+  color: #222222;
+  text-decoration: none;
 }
 
 .header-menus {
@@ -68,9 +70,35 @@ header {
   float: left;
   line-height: 75px;
   font-size: 20px;
-  color: white;
   padding-left: 15px;
   list-style: none;
+}
+
+.about {
+  text-decoration: none;
+  color: #222222;
+  transition: color 0.5s;
+}
+.about :hover {
+  color: red;
+}
+
+.categoryList {
+  text-decoration: none;
+  color: #222222;
+  transition: color 0.5s;
+}
+.categoryList :hover {
+  color: blue;
+}
+
+.topicList {
+  text-decoration: none;
+  color: #222222;
+  transition: color 0.5s;
+}
+.topicList :hover {
+  color: blue;
 }
 
 /* フッター ================================ */

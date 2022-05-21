@@ -11,18 +11,16 @@
 
   <body>
   <header>
-      <div class="header-logo">
-        <%= link_to("Ifnot", "/") %>
-      </div>
+      <%= link_to("Ifnot", "/", class:"header-logo") %>
       <ul class="header-menus">
         <li>
-          <%= link_to("Ifnotとは", "/about") %>
+          <%= link_to("Ifnotとは", "/about", class:"about") %>
         </li>
         <li>
-          <%= link_to("カテゴリ一覧", "/categories/index") %>
+          <%= link_to("カテゴリ一覧", "/categories/index", class:"categoryList") %>
         </li>
         <li>
-          <%= link_to("議題一覧", "/topics/index") %>
+          <%= link_to("議題一覧", "/topics/index", class:"topicList") %>
         </li>
       </ul>
     </header>
