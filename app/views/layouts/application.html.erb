@@ -12,24 +12,26 @@
 
   <body>
   <header>
-      <%= link_to("Ifnot", "/", class:"header-logo") %>
-      <ul class="header-menus">
-        <li>
-          <%= link_to("Ifnotとは", "/about", class:"about") %>
-        </li>
-        <li>
-          <%= link_to("カテゴリ一覧", "/categories/index", class:"categoryList") %>
-        </li>
-        <li>
-          <%= link_to("議題一覧", "/topics/index", class:"topicList") %>
-        </li>
-      </ul>
-    </header>
-    <%= yield %>
-    <footer>
-      <div class="footer-copyright">
-        <p>© All rights reserved by AmiHosaka.👶</p>
+    <div class="header-logo">
+      <%= link_to("Ifnot", "/") %>
+    </div>
+    <div class="header-menus">
+      <div class="about header-menu">
+        <%= link_to("Ifnotとは", "/about") %>
       </div>
-    </footer>
+      <div class="categoryList header-menu">
+        <%= link_to("カテゴリ一覧", "/categories/index") %>
+      </div>
+      <div class="topicList header-menu">
+        <%= link_to("議題一覧", "/topics/index") %>
+      </div>
+    </div>
+  </header>
+  <%= yield %>
+  <footer>
+    <div class="footer-copyright">
+      <p>© All rights reserved by AmiHosaka.👶</p>
+    </div>
+  </footer>
   </body>
 </html>

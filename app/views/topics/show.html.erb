@@ -1,23 +1,46 @@
 <div class="main topics-show">
-  <div class="container">
+  <div class="container topics-show-container">
         <div class="topics-show-top">
-            <h2 class="topics-show-top-title">               <%= @topic.topic_name %></h2>
-            <div class = "topics-show-top-secondary">
-                <p class="topics-show-top-category_name"><%= @category.category_name %></p>
-                <p class="topics-show-top-topic_owner"><%= @topic.topic_owner %></p>
-                <p class="topics-show-top-created_at"><%= @topic.created_at.to_s(:datetime_jp) %></p>
+            <div class="topics-show-top-title"> 
+                <div>              
+                    <%= @topic.topic_name %>
+                </div>
+            </div>
+            <div class = "topics-show-top-information-list">
+                <div class="topics-show-top-information-item topics-show-top-category_name">
+                    <div>
+                        <%= @category.category_name %>
+                    </div>
+                </div>
+                <div class="topics-show-top-information-item topics-show-top-topic_owner">
+                    <div>
+                        <%= @topic.topic_owner %>
+                    </div>
+                </div>
+                <div class="topics-show-top-information-item topics-show-top-created_at">
+                    <div>
+                        <%= @topic.created_at.to_s(:datetime_jp) %>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="topics-show-posts">
             <% @posts.each do |post| %>
                 <div class="topics-show-post">
-                    <h3 class="topics-show-post-title">
-                        <i class="fa-solid fa-comment"></i><%= post.title %></h3>
-                    <p class="topics-show-post-content"><%= post.content %></p>
-                        <div class = "topics-show-post-information">
-                            <p class="topics-show-post-username"><%= post.username %></p>
-                            <p class="topics-show-post-created_at"><%= post.created_at.to_s(:datetime_jp) %></p>
+                    <div class="topics-show-post-title">
+                        <i class="fa-solid fa-comment"></i><%= post.title %>
+                    </div>
+                    <div class="topics-show-post-content">
+                        <%= post.content %>
+                    </div>
+                    <div class = "topics-show-post-information">
+                        <div class="topics-show-post-username">
+                            <%= post.username %>
                         </div>
+                        <div class="topics-show-post-created_at">
+                            <%= post.created_at.to_s(:datetime_jp) %>
+                        </div>
+                    </div>
                 </div>
             <% end %>
         </div>
