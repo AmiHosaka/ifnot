@@ -18,11 +18,25 @@
 }
 
 .topics-show-top {
-  background-color: #f5f5f5;
-  padding: 5px 20px 5px 20px;
+  padding: 0.5em 1em;
+  margin: 1em 0 3em 0;
+  color: #5d627b;
+  background: white;
+  border-top: solid 9px #5d627b;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.22);
 
   &-title {
-    color: purple;
+    color: navy;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  &-secondary {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &-category_name {
   }
 
   &-topic_owner {
@@ -36,31 +50,47 @@
 }
 
 .topics-show-post {
-  background-color: azure;
-  padding: 5px 20px 5px 20px;
-  margin-top: 10px;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  background: #f8f6f6;
+  border-left: solid 6px #5bb7ae;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
 
   &-title {
     color: purple;
+    margin-bottom: 0px;
+    padding-left: 1.2em; /*アイコン分のスペース*/
+    line-height: 1.4; /*行高*/
+    position: relative; /*相対位置*/
+    font-size: 20px;
+  }
+
+  &-title :before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f075"; /*アイコンのユニコード*/
+    font-weight: 900;
+    position: absolute; /*絶対位置*/
+    font-size: 1em; /*サイズ*/
+    left: 0; /*アイコンの位置*/
+    top: 0; /*アイコンの位置*/
+    color: #75c0f9f0; /*アイコン色*/
   }
 
   &-content {
     background-color: #f5f5f5;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 0px;
   }
 
-  &-secondary {
+  &-information {
     display: flex;
+    justify-content: space-around;
   }
 
   &-username {
-    justify-content: space-between;
-    flex-wrap: wrap;
   }
 
   &-created_at {
-    justify-content: space-between;
-    flex-wrap: wrap;
   }
 }

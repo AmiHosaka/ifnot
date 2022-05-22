@@ -29,7 +29,7 @@ body {
 
 .main {
   width: 100%;
-  height: auto;
+  /* height: auto; */
   padding-top: 100px;
   background-color: white;
 }
@@ -72,15 +72,31 @@ header {
   font-size: 20px;
   padding-left: 15px;
   list-style: none;
+  color: #222222;
 }
 
-.about {
+.header-menus li a {
+  color: #222222;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.header-menus li a:visited {
+  color: #222222;
+  text-decoration: none;
+}
+
+.header-menus li a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+/* .about {
   text-decoration: none;
   color: #222222;
   transition: color 0.5s;
 }
 .about :hover {
-  color: red;
 }
 
 .categoryList {
@@ -99,7 +115,7 @@ header {
 }
 .topicList :hover {
   color: blue;
-}
+} */
 
 /* フッター ================================ */
 footer {
