@@ -1,13 +1,19 @@
 <div class="main categories-show">
-    <div class="container">
+    <div class="container categories-show-container">
         <div class="categories-show-title">
-            <h2><%= @category.category_name %></h2>
+            <div>
+                <%= @category.category_name %>
+            </div>
         </div>
         <div class="categories-show-topics">
             <% @topics.each do |topic| %>
                 <div class="categories-show-topic">
-                    <h3><%= link_to(topic.topic_name, "/topics/#{topic.id}")%></h3>
-                    <p><%= topic.created_at.to_s(:datetime_jp) %></p>
+                    <div class="categories-show-topic-title">
+                        <%= link_to(topic.topic_name, "/topics/#{topic.id}")%>
+                    </div>
+                    <div class="categories-show-topic-created_at">
+                        <%= topic.created_at.to_s(:datetime_jp) %>
+                    </div>
                 </div>
             <% end %>
         </div>
