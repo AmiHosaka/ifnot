@@ -1,12 +1,14 @@
 <div class="main categories-index">
-    <div class="container">
+    <div class="container categories-index-container">
         <div class ="categories-index-title">
-            <h1>カテゴリから探す</h1>
+            <div>カテゴリから探す</div>
         </div>
         <div class="categories-index-items">
             <% @categories.each do |category| %>
                 <div class="categories-index-item">
-                    <%= link_to(category.category_name, "/categories/#{category.id}") %>
+                    <div class="categories-index-item-category_name">
+                        <%= link_to(category.category_name, "/categories/#{category.id}") %>
+                    </div>
                 </div>
             <% end %>
         </div>

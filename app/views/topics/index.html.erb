@@ -1,15 +1,27 @@
 <div class="main topics-index">
-  <div class="container">
+  <div class="container topics-index-container">
         <div class="topics-index-title">
-            <h1>議題一覧</h1>
+            <div>議題一覧</div>
         </div>
         <div class="topics-index-items">
             <% @topics.each do |topic| %>
                 <div class="topics-index-item">
-                    <h3><%= link_to(topic.topic_name, "/topics/#{topic.id}")%></h3>
-                    <p><%= topic.category_id %></p>
-                    <p><%= topic.topic_owner %></p>
-                    <p><%= topic.created_at.to_s(:datetime_jp) %></p>
+                    <div class="topics-index-item-topic_name">
+                        <%= link_to(topic.topic_name, "/topics/#{topic.id}")%>
+                    </div>
+                    <div class="topics-index-item-information">
+                        <div class="topics-index-item-crated_at">
+                            <div>
+                                <%= topic.created_at.to_s(:datetime_jp) %>
+                            </div>
+                        </div>
+                        <div class="topics-index-item-category">
+                            <% @category = Category.find_by(id: topic.category_id)%>
+                            <div>
+                                <%= @category.category_name %>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             <% end %>
         </div>

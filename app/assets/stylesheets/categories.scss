@@ -3,13 +3,54 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* index ================================ */
+.categories-index-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.categories-index-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  border-bottom: solid 1px #8e8e8e;
+}
+
 .categories-index-items {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .categories-index-item {
   width: 50%;
+  background-color: azure;
+  margin-bottom: 20px;
+  color: #232323;
+  background: #fff8e8;
+  border-left: solid 10px #ffc06e;
+  padding: 0.5em 1em;
+
+  &-category_name {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  &-category_name a {
+    color: #222222;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  &-category_name a:visited {
+    color: #222222;
+    text-decoration: none;
+  }
+
+  &-category_name a:hover {
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    color: #888888;
+  }
 }
 
 /* show ================================ */
@@ -22,6 +63,7 @@
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 30px;
+  border-bottom: solid 1px #8e8e8e;
 }
 .categories-show-topics {
   display: flex;
@@ -30,6 +72,9 @@
 }
 
 .categories-show-topic {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 40%;
   background-color: azure;
   margin-bottom: 20px;
@@ -39,8 +84,8 @@
   padding: 0.5em 1em;
 
   &-title {
-    font-size: 20px;
-    font-weight: 800;
+    font-size: 25px;
+    font-weight: 700;
   }
 
   &-title a {
@@ -55,11 +100,11 @@
   }
 
   &-title a:hover {
-    color: #222fc3;
+    color: #888888;
     text-decoration: none;
   }
 
   &-created_at {
-    font-weight: 200;
+    font-weight: 300;
   }
 }

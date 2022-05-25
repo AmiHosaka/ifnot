@@ -3,13 +3,73 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* index ================================ */
+.topics-index-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.topics-index-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  border-bottom: solid 1px #8e8e8e;
+}
+
 .topics-index-items {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .topics-index-item {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  background-color: azure;
+  margin-bottom: 20px;
+  color: #232323;
+  background: #fff8e8;
+  border-left: solid 10px #ffc06e;
+  padding: 0.5em 1em;
+
+  &-topic_name {
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  &-topic_name a {
+    color: #222222;
+    text-decoration: none;
+    transition: color 0.5s;
+  }
+
+  &-topic_name a:visited {
+    color: #222222;
+    text-decoration: none;
+  }
+
+  &-topic_name a:hover {
+    color: #888888;
+    text-decoration: none;
+  }
+
+  &-information {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-created_at {
+    width: 65%;
+    text-align: center;
+    font-weight: 300;
+  }
+
+  &-category {
+    width: 35%;
+    text-align: center;
+    font-weight: 300;
+  }
 }
 
 /* show ================================ */
